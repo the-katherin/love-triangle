@@ -12,5 +12,5 @@ for (var i=1; i<preferences.length; i++) {
 
 }
 numberOfLovers = numberOfLovers / 3;
-return numberOfLovers;
+return Math.round(numberOfLovers);
 }
