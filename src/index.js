@@ -3,5 +3,14 @@
  * @returns number of love triangles
  */
 module.exports = function getLoveTrianglesCount(preferences = []) {
-  // your implementation
-};
+var numberOfLovers = 0;
+for (var i=1; i<preferences.length; i++) {
+ if (preferences[i] !== preferences[preferences[i]-1] & preferences[preferences[preferences[i]-1]-1] === (i+1)) {
+
+   numberOfLovers = numberOfLovers + 1;
+  }
+
+}
+numberOfLovers = numberOfLovers / 3;
+return numberOfLovers;
+}
